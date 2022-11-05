@@ -45,7 +45,7 @@ void fsm_simple_buttons_run(){
 
 		break;
 
-	case MAN_INC:
+	case MAN_INC:		//Trang thai nhan INC, tang counter
 
 		if (isButton1Pressed()){
 			status = MAN_RESET;
@@ -75,7 +75,7 @@ void fsm_simple_buttons_run(){
 
 
 
-	case MAN_DEC:
+	case MAN_DEC:		//Trang thai nhan DEC, giam counter
 
 		if (isButton1Pressed()){
 			status = MAN_RESET;
@@ -104,7 +104,7 @@ void fsm_simple_buttons_run(){
 		break;
 
 
-	case MAN_RESET:
+	case MAN_RESET:				//trang thai reset counter = 0;
 
 		if (isButton1Pressed()){
 			status = MAN_RESET;

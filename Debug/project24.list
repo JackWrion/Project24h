@@ -1434,7 +1434,7 @@ void fsm_simple_buttons_run(){
 		break;
  8000a4e:	e0fb      	b.n	8000c48 <fsm_simple_buttons_run+0x2d4>
 
-	case MAN_INC:
+	case MAN_INC:		//Trang thai nhan INC, tang counter
 
 		if (isButton1Pressed()){
  8000a50:	f7ff fe46 	bl	80006e0 <isButton1Pressed>
@@ -1532,7 +1532,7 @@ void fsm_simple_buttons_run(){
 
 
 
-	case MAN_DEC:
+	case MAN_DEC:		//Trang thai nhan DEC, giam counter
 
 		if (isButton1Pressed()){
  8000af2:	f7ff fdf5 	bl	80006e0 <isButton1Pressed>
@@ -1634,7 +1634,7 @@ void fsm_simple_buttons_run(){
  8000ba0:	200000a8 	.word	0x200000a8
 
 
-	case MAN_RESET:
+	case MAN_RESET:				//trang thai reset counter = 0;
 
 		if (isButton1Pressed()){
  8000ba4:	f7ff fd9c 	bl	80006e0 <isButton1Pressed>

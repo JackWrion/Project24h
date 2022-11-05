@@ -1797,13 +1797,13 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
 
-  setTimer1(1000);
+  setTimer1(1000);		//timer cho Blinky Led
  8000c82:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
  8000c86:	f7ff fc0b 	bl	80004a0 <setTimer1>
-  setTimer3(1000);
+  setTimer3(1000);		//timer cho 7segment dem nguoc
  8000c8a:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
  8000c8e:	f7ff fc3f 	bl	8000510 <setTimer3>
-  setTimer4(100);
+  setTimer4(100);		//timer cap nhat 7SEG
  8000c92:	2064      	movs	r0, #100	; 0x64
  8000c94:	f7ff fc58 	bl	8000548 <setTimer4>
 
@@ -1813,6 +1813,7 @@ int main(void)
 	  fsm_simple_buttons_run();
  8000c98:	f7ff fe6c 	bl	8000974 <fsm_simple_buttons_run>
 
+	  //Blinky LED
 	  if (timer1_flag == 1){
  8000c9c:	4b0b      	ldr	r3, [pc, #44]	; (8000ccc <main+0x64>)
  8000c9e:	681b      	ldr	r3, [r3, #0]
@@ -1827,6 +1828,7 @@ int main(void)
  8000cb0:	f000 fced 	bl	800168e <HAL_GPIO_TogglePin>
 	  }
 
+	  //Cap nhat so hien thi tren 7SEG
 	  if (timer4_flag == 1){
  8000cb4:	4b07      	ldr	r3, [pc, #28]	; (8000cd4 <main+0x6c>)
  8000cb6:	681b      	ldr	r3, [r3, #0]

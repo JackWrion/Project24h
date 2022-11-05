@@ -112,20 +112,22 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
 
-  setTimer1(1000);
-  setTimer3(1000);
-  setTimer4(100);
+  setTimer1(1000);		//timer cho Blinky Led
+  setTimer3(1000);		//timer cho 7segment dem nguoc
+  setTimer4(100);		//timer cap nhat 7SEG
 
   while (1)
   {
 
 	  fsm_simple_buttons_run();
 
+	  //Blinky LED
 	  if (timer1_flag == 1){
 		  setTimer1(1000);
 		  HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
 	  }
 
+	  //Cap nhat so hien thi tren 7SEG
 	  if (timer4_flag == 1){
 		  setTimer4(100);
 		  update7SEG();
